@@ -61,7 +61,7 @@ class peek_insert_iter:
         return next(self.iter)
 
     def insert(self, iterable):
-        self.inserted[0:0] = iterable
+        self.inserted[0:0] = tuple(iterable)
 
     def _peek(self):
         if not self.peeked:
